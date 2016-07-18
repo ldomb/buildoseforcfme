@@ -119,4 +119,4 @@ oadm router management-metrics -n default --credentials=/etc/origin/master/opens
 echo "MAUNUAL SETPS"
 echo "add line to /etc/origin/master-config.yaml"
 echo "assetConfig:"
-echo "metricsPublicURL: https://$MASTERFQDN/hawkular/metrics"
+echo "metricsPublicURL: https://$HAWKULARFQDN/hawkular/metrics"
