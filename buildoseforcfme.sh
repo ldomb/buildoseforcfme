@@ -117,3 +117,5 @@ oadm router management-metrics -n default --credentials=/etc/origin/master/opens
 #######################################################################################################
 
 sed "/assetConfig/s/assetConfig:/assetConfig:\n  metricsPublicURL: \"https\:\/\/$HAWKULARFQDN\/hawkular\/metrics\"/" -i /etc/origin/master/master-config.yaml
+
+systemctl restart atomic-openshift-master
