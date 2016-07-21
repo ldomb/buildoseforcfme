@@ -67,7 +67,7 @@ echo "login as admin"
 oc login -u system:admin
  
 echo "creating registery"
-oadm registry --service-account=registry --config=/etc/origin/master/admin.kubeconfig --credentials=/etc/origin/master/openshift-registry.kubeconfig --images='registry.access.redhat.com/openshift3/ose-${component}:${version}' --mount-host=/images
+#oadm registry --service-account=registry --config=/etc/origin/master/admin.kubeconfig --credentials=/etc/origin/master/openshift-registry.kubeconfig --images='registry.access.redhat.com/openshift3/ose-${component}:${version}' --mount-host=/images
  
 echo "creating cert"
 CA=/etc/origin/master
