@@ -115,8 +115,5 @@ echo "creating router for managmeent metrics"
 oadm router management-metrics -n default --credentials=/etc/origin/master/openshift-router.kubeconfig --service-account=router --ports='443:5000' --selector="kubernetes.io/hostname=$MASTERFQDN" --stats-port=1937 --host-network=false
  
 #######################################################################################################
- 
-echo "MAUNUAL SETPS"
-echo "add line to /etc/origin/master-config.yaml"
-echo "assetConfig:"
-echo "metricsPublicURL: https://$HAWKULARFQDN/hawkular/metrics"
+
+sed "/assetConfig/s/assetConfig:/assetConfig:\n  metricsPublicURL: \"https\:\/\/$HAWKULARFQDN\/hawkular\/metrics\"/" -i /etc/origin/master/master-config.yaml
